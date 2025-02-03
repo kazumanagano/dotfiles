@@ -26,7 +26,7 @@ fi
 if [ -d "$DOTFILES_DIR" ]; then
   cd "$DOTFILES_DIR" && git pull origin main
 else
-  git clone https://github.com/your-username/dotfiles.git "$DOTFILES_DIR"
+  git clone https://github.com/kazumanagano/dotfiles.git "$DOTFILES_DIR"
 fi
 
 # 各スクリプトを実行
