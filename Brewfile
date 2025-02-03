@@ -1,5 +1,3 @@
-tap "homebrew/cask"
-
 cask "android-studio"
 cask "bitwarden"
 cask "cleanmymac"
