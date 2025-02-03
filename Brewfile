@@ -1,3 +1,5 @@
+brew "mas"
+
 cask "android-studio"
 cask "bitwarden"
 cask "cleanmymac"
@@ -18,5 +20,6 @@ cask "visual-studio-code"
 cask "xcodes"
 
 # Mac App Store apps
+mas "LINE", id: 539883307
 mas "Paste", id: 967805235
 mas "Yoink", id: 457622435
