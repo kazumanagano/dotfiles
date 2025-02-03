@@ -34,6 +34,8 @@ bash "$DOTFILES_DIR/scripts/homebrew.sh"
 bash "$DOTFILES_DIR/scripts/macos.sh"
 bash "$DOTFILES_DIR/scripts/git.sh"
 bash "$DOTFILES_DIR/scripts/zsh.sh"
-bash "$DOTFILES_DIR/scripts/xcode.sh"
+
+# Xcodesがアカウントの関係で利用できないのでコメントアウト
+# bash "$DOTFILES_DIR/scripts/xcode.sh"
 
 echo "セットアップが完了しました！ 🚀"
