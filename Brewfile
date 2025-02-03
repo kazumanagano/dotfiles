@@ -19,5 +19,4 @@ cask "xcodes"
 
 # Mac App Store apps
 mas "Paste", id: 967805235
-mas "Sleeve", id: 1606145041
 mas "Yoink", id: 457622435
