@@ -9,14 +9,15 @@ cask "krisp"
 cask "line"
 cask "notion"
 cask "obsidian"
-cask "paste"
 cask "postman"
 cask "sf-symbols"
 cask "slack"
-cask "sleeve"
 cask "soundsource"
 cask "spotify"
 cask "visual-studio-code"
 cask "xcodes"
-cask "yoink"
-cask "zoom"
+
+# Mac App Store apps
+mas "Paste", id: 967805235
+mas "Sleeve", id: 1606145041
+mas "Yoink", id: 457622435
