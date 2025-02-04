@@ -10,9 +10,14 @@ git config --global user.email "nagano.kazuma.na5@gmail.com"
 git config --global pull.rebase true
 git config --global core.editor "vim"
 
-# .gitignore_global の適用
+# Git のグローバル ignore を ~/.config/git/ignore に設置
+GIT_IGNORE_PATH="$HOME/.config/git/ignore"
+mkdir -p "$HOME/.config/git"  # ディレクトリがない場合は作成
+
 if [ -f "$DOTFILES_DIR/.gitignore_global" ]; then
-  git config --global core.excludesfile "$DOTFILES_DIR/.gitignore_global"
+  echo "グローバル Git ignore を適用: $GIT_IGNORE_PATH"
+  ln -sf "$DOTFILES_DIR/.gitignore_global" "$GIT_IGNORE_PATH"
+  git config --global core.excludesfile "$GIT_IGNORE_PATH"
 else
   echo "⚠️ .gitignore_global が見つかりません。"
 fi
