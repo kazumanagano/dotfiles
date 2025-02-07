@@ -1,5 +1,7 @@
 brew "gh"
+brew "npm"
 brew "mas"
+brew "pnpm"
 
 cask "android-studio"
 cask "bitwarden"
