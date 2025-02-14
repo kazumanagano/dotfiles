@@ -1,4 +1,5 @@
 brew "gh"
+brew "go"
 brew "jq"
 brew "npm"
 brew "mas"
