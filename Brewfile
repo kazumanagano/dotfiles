@@ -1,3 +1,4 @@
+brew "google-cloud-sdk"
 brew "gh"
 brew "npm"
 brew "mas"
