@@ -25,30 +25,24 @@ if [ -d "$DOTFILES_DIR" ]; then
   echo "dotfiles リポジトリが既に存在します。更新を確認します..."
   cd "$DOTFILES_DIR"
 
-  # ローカル変更がある場合は一時保存
+  # ローカル変更があるか確認
   if ! git diff --quiet || ! git diff --staged --quiet; then
-    echo "ローカルに未コミットの変更があります。変更を一時保存して `git pull` を実行します。"
-    git stash push -m "Auto stash before pull"
+    echo "ローカルに未コミットの変更があります。変更を一時コミットします..."
+    git add .
+    git commit -am "Auto-save before pull"
   fi
 
   # pull して最新状態に更新
-  git pull origin main || {
+  echo "リモートの最新状態を取得します..."
+  git pull --rebase origin main || {
     echo "⚠️ git pull に失敗しました。変更を破棄してリセットしたい場合は以下を実行してください:"
     echo "cd $DOTFILES_DIR && git reset --hard origin/main"
     exit 1
   }
 
-  # 一時保存した変更を戻す
-  if git stash list | grep -q "Auto stash before pull"; then
-    echo "変更を元に戻します..."
-    git stash pop
-  fi
-
-  # 変更がある場合は自動コミットしてリモートへ push
-  if ! git diff --quiet || ! git diff --staged --quiet; then
-    echo "変更をコミットしてリモートにプッシュします..."
-    git add .
-    git commit -m "Auto-sync: ローカルの変更をリモートに反映"
+  # 変更がある場合はリモートにプッシュ
+  if ! git diff --quiet origin/main; then
+    echo "ローカルの変更をリモートにプッシュします..."
     git push origin main || {
       echo "⚠️ git push に失敗しました。手動でプッシュしてください。"
       exit 1
