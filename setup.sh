@@ -55,6 +55,18 @@ else
   git clone https://github.com/your-username/dotfiles.git "$DOTFILES_DIR"
 fi
 
+# --- .finicky.js のシンボリックリンクを作成 ---
+if [ -f "$DOTFILES_DIR/.finicky.js" ]; then
+  if [ -L "$HOME/.finicky.js" ]; then
+    echo ".finicky.js のシンボリックリンクは既に存在します。"
+  else
+    ln -sf "$DOTFILES_DIR/.finicky.js" "$HOME/.finicky.js"
+    echo "シンボリックリンクを作成: $HOME/.finicky.js -> $DOTFILES_DIR/.finicky.js"
+  fi
+else
+  echo "⚠️ .finicky.js が見つかりません。"
+fi
+
 # 各スクリプトを実行
 bash "$DOTFILES_DIR/scripts/homebrew.sh"
 bash "$DOTFILES_DIR/scripts/macos.sh"
