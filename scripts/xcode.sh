@@ -28,4 +28,7 @@ echo "Xcode のパッケージプラグイン & マクロのフィンガープ�
 defaults write com.apple.dt.Xcode IDESkipPackagePluginFingerprintValidatation -bool YES
 defaults write com.apple.dt.Xcode IDESkipMacroFingerprintValidation -bool YES
 
+# 複数のプロジェクトを同時に開いていた際に、再起動時に前回の状態を復元されると困るので無効化
+defaults write com.apple.dt.Xcode ApplePersistenceIgnoreState YES
+
 echo "Xcode のセットアップが完了しました！"
