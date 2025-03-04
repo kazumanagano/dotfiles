@@ -23,6 +23,7 @@ cask "slack"
 cask "soundsource"
 cask "spotify"
 cask "visual-studio-code"
+cask "visual-studio-code@insiders"
 cask "xcodes"
 
 # Mac App Store apps
