@@ -1,4 +1,6 @@
-brew "finestructure/tap/arena"
+tap "finestructure/tap"
+
+brew "arena"
 brew "gh"
 brew "go"
 brew "jq"
