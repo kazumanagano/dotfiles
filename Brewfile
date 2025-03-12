@@ -1,3 +1,4 @@
+brew "finestructure/tap/arena"
 brew "gh"
 brew "go"
 brew "jq"
