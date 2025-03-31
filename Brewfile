@@ -1,5 +1,3 @@
-tap "finestructure/tap"
-
 brew "arena"
 brew "gh"
 brew "go"
