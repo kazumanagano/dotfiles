@@ -49,3 +49,8 @@ fi
 
 # git sqript
 export PATH=$PATH:~/local/bin
+
+# GPG
+export GPG_TTY=$(tty)
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
