@@ -22,7 +22,6 @@ fi
 # Git プロンプト表示設定
 # =======================
 setopt PROMPT_SUBST
-source ~/.git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWSTASHSTATE=true
