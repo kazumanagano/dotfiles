@@ -28,9 +28,8 @@ GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUPSTREAM=auto
 
-# プロンプトの設定 (Git 情報を表示)
-setopt PROMPT_SUBST
-PS1='%F{green}%n@%m%f: %F{cyan}%~%f %F{red}$(__git_ps1 "(%s)")%f\n\$ '
+export PROMPT="%F{green}${USER}:%f%F{blue}%(5~|%-1~/…/%3~|%4~)%f%F{red}\$(__git_ps1)%f
+%F{yellow}%(!.#.$) %F{white}"
 
 # 補完機能の設定
 autoload -Uz compinit && compinit -u
