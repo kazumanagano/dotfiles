@@ -1,4 +1,5 @@
 brew "arena"
+brew "ffmpeg"
 brew "gh"
 brew "go"
 brew "gpg"
