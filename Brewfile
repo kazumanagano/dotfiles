@@ -10,6 +10,7 @@ brew "pnpm"
 
 cask "android-studio"
 cask "arc"
+cask "bartender"
 cask "cleanmymac"
 cask "discord"
 cask "docker"
