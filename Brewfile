@@ -6,8 +6,13 @@ brew "gpg"
 brew "jq"
 brew "npm"
 brew "mas"
-brew "mise"
 brew "pnpm"
+
+# For SweetPad
+brew "mise"
+brew "swift-format"
+brew "xcbeautify"
+brew "xcode-build-server"
 
 cask "android-studio"
 cask "arc"
