@@ -6,6 +6,7 @@ brew "gpg"
 brew "jq"
 brew "npm"
 brew "mas"
+brew "mise"
 brew "pnpm"
 
 cask "android-studio"
