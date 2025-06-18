@@ -6,6 +6,7 @@ brew "gpg"
 brew "jq"
 brew "npm"
 brew "mas"
+brew "pinentry-mac" # For GitのGPG署名
 brew "pnpm"
 
 # For SweetPad
