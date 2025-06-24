@@ -1,3 +1,4 @@
+brew "1password-cli"
 brew "arena"
 brew "ffmpeg"
 brew "gh"
