@@ -69,3 +69,16 @@ export PATH=$PATH:~/local/bin
 export GPG_TTY=$(tty)
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/kazumanagano/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kazumanagano/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/kazumanagano/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kazumanagano/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+. "$HOME/.local/bin/env"
+
+# Claude Code Tip commands setup
+if [ -f "$HOME/.claude/scripts/tip_commands/setup_tip_env.sh" ]; then
+    source "$HOME/.claude/scripts/tip_commands/setup_tip_env.sh"
+fi
